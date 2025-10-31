@@ -1,11 +1,12 @@
 
+# This file is very similar to the previous one but uses 5-fold cross validation
 import sys 
 sys.path.append("..") 
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = '3'
 os.environ["WORLD_SIZE"] = "1"
 
-from model.MMGSN.syn_model_2D_T2FS import *
+from model.MMGSN_new.syn_model_2D_T2FS import *
 
 import torch
 import torch.nn as nn
@@ -35,8 +36,8 @@ data_loader = FoldDataLoader(
     random_state=728,
     n_splits=5
 )
-fold_num = 1
-train_loader, val_loader = data_loader.get_fold(fold_num)
+fold_num = 1 # DIFFERENCE: Using fold 1,2,3,4,5 step by step, instead of 'All' (5 folds )
+train_loader, val_loader = data_loader.get_fold(fold_num)# DIFFERENCE: Get specific fold for cross-validation
 
 
 G_optimizer = optim.AdamW(model_img.parameters(), lr=lr) 

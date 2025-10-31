@@ -6,7 +6,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '5'
 os.environ["WORLD_SIZE"] = "1"
 
 
-from model.pix2pix.unet import UNetModel, SimpleDiscriminator
+from model.pix2pix.unet_attention_False import UNetModel, SimpleDiscriminator
 
 import torch
 import torch.nn as nn

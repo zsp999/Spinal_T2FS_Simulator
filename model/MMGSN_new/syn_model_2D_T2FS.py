@@ -185,7 +185,7 @@ class Discriminator(nn.Module):
 
 class MyLambdaLR():
     def __init__(self, n_epochs, decay_start_epoch):
-        assert ((n_epochs - decay_start_epoch) > 0), 
+        assert ((n_epochs - decay_start_epoch) > 0)
         self.n_epochs = n_epochs
         self.decay_start_epoch = decay_start_epoch
 
