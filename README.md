@@ -4,7 +4,7 @@
 
 2. The utils folder includes code for data loading, 5-fold validation data splitting, dataset preprocessing, and model metric calculation.
 
-3. train2D_mmgsn_AllFold0507.py is the training code for the STS model using the entire training set, while train2D_mmgsn_5Fold0506_Fold1.py is for 5-fold cross-validation on the training set. You can specify which fold to validate on (fold_num = 1/2/3/4/5) and train on the remaining four folds.
+3. train2D_STS_AllFold0507.py is the training code for the STS model using the entire training set, while train2D_STS_5Fold0506_Fold1.py is for 5-fold cross-validation on the training set. You can specify which fold to validate on (fold_num = 1/2/3/4/5) and train on the remaining four folds.
 
 4. Model weights can be downloaded from: https://github.com/zsp999/Spinal_T2FS_Simulator/tree/master/model_save/STS_foldAll.pt. 
 **Download instructions:** Click the link above, then click "View raw" on the GitHub page to download the model file. You can implement and apply them to similar medical image generation tasks. evaluate_models.ipynb is the model inference code. After downloading the model weights, you can modify the corresponding paths and run it. Please ensure your data format is consistent with our example (./test_sample/preprocessed_data). Additionally, the corresponding output results for the three provided test cases can be found in the ./test_sample/test_results folder.
